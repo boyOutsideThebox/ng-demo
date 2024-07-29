@@ -1,4 +1,6 @@
 name = "detect-country-worker"
+main = "detect-country-worker.js"
 type = "javascript"
 workers_dev = true
-route = "ng-demo.pages.dev/*"
+route = "ng-demo.pages.dev"
+compatibility_date = "2024-07-29"
