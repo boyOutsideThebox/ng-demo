@@ -1,0 +1,4 @@
+name = "detect-country-worker"
+type = "javascript"
+workers_dev = true
+route = "localhost:4200/*"

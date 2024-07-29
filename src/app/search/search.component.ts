@@ -16,7 +16,8 @@ export class SearchComponent implements OnInit, OnDestroy {
   query!: string;
   searchResults: Person[] = [];
   sub!: Subscription;
-
+  selectedCountry!: string;
+  
   constructor(private searchService: SearchService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -26,6 +27,11 @@ export class SearchComponent implements OnInit, OnDestroy {
         this.search();
       }
     });
+
+    const countryCode = document.getElementById('countryCode') as HTMLInputElement;
+    if (countryCode) {
+      this.selectedCountry = countryCode.value;
+    }
   }
 
   ngOnDestroy(): void {
