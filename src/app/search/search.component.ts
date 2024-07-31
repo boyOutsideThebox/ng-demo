@@ -27,7 +27,12 @@ export class SearchComponent implements OnInit, OnDestroy {
         this.search();
       }
     });
-
+    fetch(window.location.origin).then(resp => {
+      resp.headers.forEach((val,key) => {
+          console.log(key +'->'+ val);
+      })
+    })
+    
     const countryCode = document.getElementById('countryCode') as HTMLInputElement;
     if (countryCode) {
       this.selectedCountry = countryCode.value;
